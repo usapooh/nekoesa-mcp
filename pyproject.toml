@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nekoesa-mcp"
+version = "0.1.0"
+description = "NEKOESA MCP Server"
+requires-python = ">=3.8"
+dependencies = [
+    "httpx",
+    "pydantic",
+    "fastmcp",
+    "uvicorn",
+]
+
+[project.scripts]
+nekoesa-mcp-server = "src.nekoesa_mcp_server.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.hatch.build]
+packages = ["src"]

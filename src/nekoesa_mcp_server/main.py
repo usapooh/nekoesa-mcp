@@ -1,11 +1,6 @@
-import os
-from datetime import datetime, timedelta, timezone
-from enum import StrEnum
-from typing import List
-
 import httpx
-from mcp.server.fastmcp import FastMCP, Image
-from pydantic import AwareDatetime, BaseModel, Field
+from mcp.server.fastmcp import FastMCP
+from pydantic import BaseModel, Field
 
 BASE_URL = "https://neko.0g0.jp"
 
